@@ -9,6 +9,15 @@ module.exports = app => {
   	app.get('/hello', jsonp, 'hello.hi');
   	app.get('/hello/img', jsonp, 'hello.img');
 
+  	app.get('/init', jsonp, 'project.init');
+
+
+  	app.get('/account/login', 'account.login');
+  	app.get('/account/register', 'account.register');
+  	app.get('/account/repass', 'account.repass');
+
+
+
 };
 
 
