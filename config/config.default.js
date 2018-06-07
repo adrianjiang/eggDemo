@@ -11,17 +11,17 @@ module.exports = appInfo => {
 		clients: {
 	    // clientId, 获取client实例，需要通过 app.mysql.get('clientId') 获取
 			db1703281119: {
-				host: 'localhost',
+                host: 'rm-m5e0jkg19wt4w987bo.mysql.rds.aliyuncs.com',
 				port: '3306',
-				user: 'root',
-				password: 'angel',
+                user: 'adrian',
+				password: 'TeApQLynF6Yc',
 				database: 'db1703281119',
 			},
 			db1703281120: {
-				host: 'localhost',
+				host: 'rm-m5e0jkg19wt4w987bo.mysql.rds.aliyuncs.com',
 				port: '3306',
-				user: 'root',
-				password: 'angel',
+                user: 'adrian',
+				password: 'TeApQLynF6Yc',
 				database: 'db1703281119',
 			},
 		},

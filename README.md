@@ -1,33 +1,54 @@
-# example
+# 项目准备
 
-
-
-## QuickStart
-
-<!-- add docs here for user -->
-
-see [egg docs][egg] for more detail.
-
-### Development
-```shell
-$ npm install
-$ npm run dev
-$ open http://localhost:7001/news
-```
-
-### Deploy
-
-Use `EGG_SERVER_ENV=prod` to enable prod mode
+## 配置淘宝镜像
 
 ```shell
-$ EGG_SERVER_ENV=prod npm start
+npm config set registry https://registry.npm.taobao.org --global
+npm config set disturl https://npm.taobao.org/dist --global
 ```
 
-### npm scripts
+## 安装依赖
 
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
+```shell
+npm i
+```
+
+## 修改mysql账户
+
+config/config.default.js
 
 
-[egg]: https://eggjs.org
+# 启动项目
+
+## 测试启动
+
+```shell
+npm run dev
+```
+
+## 测试地址
+
+[http://localhost:7001/hello](http://localhost:7001/hello)
+
+## 创建数据表
+
+[http://localhost:7001/init](http://localhost:7001/init)
+
+# 上线部署
+
+## 设置部署端口
+
+修改package.json第27行，port=5100
+
+## 上线启动
+
+```shell
+npm start
+```
+
+## 停止项目
+
+```shell
+npm stop
+```
+

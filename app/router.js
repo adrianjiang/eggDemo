@@ -1,15 +1,24 @@
 'use strict';
 
+var koa = require('koa'); 
+var cors = require('koa-cors'); 
+
+// var app = koa(); 
+
 module.exports = app => {
-	const jsonp = app.jsonp();
+	// const jsonp = app.jsonp();
+	app.use(cors());
 
   	app.get('/', 'home.index');
+
+  	// 路径传参
+  	// http://localhost:7001/user/123
   	app.get('/user/:id', 'user.info');
 
-  	app.get('/hello', jsonp, 'hello.hi');
-  	app.get('/hello/img', jsonp, 'hello.img');
+  	app.get('/hello', 'hello.hi');
+  	app.get('/hello/img', 'hello.img');
 
-  	app.get('/init', jsonp, 'project.init');
+  	app.get('/init', 'project.init');
 
 
   	app.get('/account/login', 'account.login');
